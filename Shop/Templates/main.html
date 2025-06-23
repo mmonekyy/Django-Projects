@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About us</title>
+  <link
+      rel="stylesheet"
+      href="{% static 'css/style.css' %}"
+    />
+</head>
+<body>
+    {% include "navbar.html" %}
+  <div class="welcome-section" style="text-align:center; margin: 40px 0;">
+    <h1>Welcome to Minion Selle Store!</h1>
+    <p>
+      Step into the colorful world of Minion Selle, where your favorite minions come to life through a unique selection of products! 
+      Our store is dedicated to all fans of these mischievous and lovable characters. Whether you are looking for toys, gadgets, accessories, or exclusive collectibles, you will find something special here to brighten your day.
+    </p>
+    <p>
+      At Minion Selle, we believe that a little bit of fun and laughter can make every day better. That’s why we carefully select each item in our collection to ensure it brings joy to minion fans of all ages. 
+      From plush toys perfect for cuddling, to quirky mugs and stationery for your desk, our range is designed to put a smile on your face.
+    </p>
+    <p>
+      Are you searching for the perfect gift for a fellow minion enthusiast? Or maybe you want to treat yourself to something playful and unique? 
+      Explore our store and discover a world full of minion-inspired surprises. Our friendly team is always here to help you find exactly what you’re looking for.
+    </p>
+    <p style="margin-top:10px;">
+      Click on the minion to see all our products and start your adventure with Minion Selle!
+    </p>
+  </div>
+  {% include "footer.html" %}
+</body>
+</html>

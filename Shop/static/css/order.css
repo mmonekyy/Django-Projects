@@ -1,0 +1,27 @@
+.order-details {
+    height: 6em;
+    background-color: rgba(90, 90, 90, 1);
+    text-align: center;
+    margin: 2em;
+    border-radius: 20px;
+    
+}
+.order-details:hover{
+    background-color: rgba(217, 217, 217, 0.5);
+    box-shadow: 0 0px 30px rgba(252, 163, 17, 0.35);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.order-summary {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 91.6%;
+    overflow-y: auto;
+}
+.container {
+    height: 77.6%;
+    padding-bottom: 1em;
+}
+.order-header{
+    text-align: center;
+}

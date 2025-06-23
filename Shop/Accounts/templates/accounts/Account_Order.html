@@ -1,0 +1,24 @@
+{% load static %}
+<title>Order Summary</title>
+<link
+      rel="stylesheet"
+      href="{% static 'css/style.css' %}"
+    />
+{% include "navbar.html" %}
+<div class="container">
+<h3 class="order-header">
+Hello {{ user.first_name }} , order has been successfully placed. Here are the details of your order:
+</h3>
+<br>
+<section class="order-summary">
+{% for order in orders %}
+<div class="order-details">
+Order ID: {{ order.id }}<br>
+Order Date: {{ order.order_date }}<br>
+Order Total: {{ order.total_amount }} $<br>
+Paymant status: {{order.status}}
+</div>
+{% endfor %}
+</section>
+</div>
+{% include "footer.html" %}

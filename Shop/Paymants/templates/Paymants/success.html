@@ -1,0 +1,20 @@
+{% load static %}
+{% include "navbar.html" %}
+<title>Payment Success</title>
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+<div class="success-container">
+  {% if payment_method == "PayPal" %}
+    <h2 class="success-title">Thank you for your order!</h2>
+    <p>Please send the payment to the following email address:</p>
+    <div class="success-info"><b>example@gmail.com</b></div>
+    <p>Make sure to include your order number in the payment comment.</p>
+    <div class="order-id">Order ID: <span>{{ order.id }}</span></div>
+  {% elif payment_method == "Bank_transfer" %}
+    <h2 class="success-title">Thank you for your order!</h2>
+    <p>Please transfer the amount to the following bank account:</p>
+    <div class="success-info">2137 2137 2137 2137 2137 2137</div>
+    <p>Make sure to include your order number in the payment information.</p>
+    <div class="order-id">Order ID: <span>{{ order.id }}</span></div>
+  {% endif %}
+</div>
+{% include "footer.html" %}

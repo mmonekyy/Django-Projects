@@ -1,0 +1,23 @@
+navbar{
+    background-color: #14213D;
+    color: white;
+    display: flex;
+    height: 6em;
+    justify-content: center;
+    align-items: center;
+}
+navbar a{
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    font-size: 2em;
+}
+.active {
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: #FCA311;
+
+}
+.active-products{
+    color: #000;
+}

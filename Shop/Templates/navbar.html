@@ -1,0 +1,6 @@
+{% load static %}
+<navbar>
+  <a href="{% url 'About_us' %}" {% if request.path == '/' %}class="active"{% endif %}>About us</a>
+  <a href="{% url 'products:product_list' %}" {% if request.resolver_match.url_name == 'product_list' %}class="active"{% endif %}>Minions</a>
+  <a href="{% url 'accounts' %}" {% if request.resolver_match.url_name == 'accounts' %}class="active"{% endif %}>Login</a>
+</navbar>

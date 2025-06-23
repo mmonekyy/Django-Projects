@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    {% include "navbar.html" %}
+    <div class="form-container">
+      <h1 class="cart-title">Your Shopping Cart</h1>
+      {% if cart %}
+        <div class="cart-list">
+          {% for item in cart %}
+            <div class="cart-item">
+              <div class="cart-item-info">
+                <h3>{{ item.product.name }}</h3>
+                <p>Price: <span>${{ item.product.price }}</span></p>
+                <p>Quantity: <span>{{ item.quantity }}</span></p>
+              </div>
+              <a class="remove-link" href="{% url 'paymants:remove_from_cart' item.product.id %}">✕</a>
+            </div>
+          {% endfor %}
+        </div>
+        <p class="total-amount">Total: <span>${{ total_amount }}</span></p>
+        <form action="create_order/" method="post" class="paymants-form">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="shipping_address">Shipping address:</label>
+            <input type="text" name="shipping_address" id="shipping_address" required />
+          </div>
+          <div class="form-group">
+            <label for="zipcode">Zip Code:</label>
+            <input type="text" name="zipcode" id="zipcode"
+              onkeypress="return (event.charCode >= 48 && event.charCode <= 57) && this.value.length < 5"
+              required />
+          </div>
+          <div class="form-group">
+            <label for="paymant_method">Payment Method:</label>
+            <select name="paymant_method" id="paymant_method" required>
+              <option value="PayPal">PayPal</option>
+              <option value="Bank_transfer">Bank transfer</option>
+            </select>
+          </div>
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      {% else %}
+        <p class="empty-cart">Your cart is empty</p>
+      {% endif %}
+    </div>
+    {% include "footer.html" %}
+  </body>
+</html>
