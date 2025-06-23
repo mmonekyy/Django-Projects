@@ -1,5 +1,9 @@
 # 🛍️ Minion Shop
 
+## Description
+
+Example shop code
+
 ## 🟡 Landing Page  
 This is the page the user sees immediately upon entering the shop:
 
