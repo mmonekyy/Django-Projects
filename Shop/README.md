@@ -1,9 +1,9 @@
 # 🛍️ Minion Shop
 
 ## 📂 Project Structure
-`Shop/`
-├── `README.md`
-├── `requirements.txt`
+Shop
+├── README.md
+├── requirements.txt
 ├── manage.py
 ├── db.sqlite3
 ├── Templates/
