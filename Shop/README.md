@@ -51,5 +51,3 @@ When everything is correctly filled out, the user will see a success confirmatio
 ![Success](IMG_TO_README/Succes.png)
 
 ---
-
-> Thank you for shopping at **Minion Shop**! 💛  
