@@ -1,31 +1,5 @@
 # 🛍️ Minion Shop
 
-## 📂 Project Structure
-Shop
-├── README.md
-├── requirements.txt
-├── manage.py
-├── db.sqlite3
-├── Templates/
-│ ├── Accounts/
-│ │ └── templates/
-│ │ ├── urls.py
-│ │ └── views.py
-│ ├── Payments/
-│ │ └── templates/
-│ │ ├── models.py
-│ │ ├── urls.py
-│ │ └── views.py
-│ └── Products/
-│ ├── migrations/
-│ └── templates/
-│ ├── models.py
-│ ├── urls.py
-│ └── views.py
-├── Media/
-├── Static/
-│ ├── css/
-│ └── js/
 ## 🟡 Landing Page  
 This is the page the user sees immediately upon entering the shop:
 
