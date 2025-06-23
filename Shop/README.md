@@ -2,8 +2,8 @@
 
 ## 📂 Project Structure
 Shop/
-├── README.md
-├── requirements.txt
+├── `README.md`
+├── `requirements.txt`
 ├── manage.py
 ├── db.sqlite3
 ├── Templates/
