@@ -1,31 +1,10 @@
 # 🛍️ Minion Shop
+📦 To install project dependencies, run:
+pip install -r requirements.txt  
 
-## 📂 Project Structure
-Shop/
-├── README.md
-├── requirements.txt
-├── manage.py
-├── db.sqlite3
-├── Templates
-├──── Accounts 
-│ ├── templates
-│ ├── urls.py
-│ └── views.py
-├──Media
-├──── Payments 
-│ ├── templates
-│ ├── models.py
-│ ├── urls.py
-│ └── views.py
-├──── Products 
-│ ├── migrations
-│ ├── templates
-│ ├── models.py
-│ ├── urls.py
-│ └── views.py
-└──Static
-    ├── css
-    └── js
+➡️ To add example products to your database, see the [Add Products to the Database](#️-add-products-to-the-database) section below.
+
+---
 ## 🟡 Landing Page  
 This is the page the user sees immediately upon entering the shop:
 
@@ -74,4 +53,34 @@ When everything is correctly filled out, the user will see a success confirmatio
 
 ---
 
-> Thank you for shopping at **Minion Shop**! 💛  
+## 🗄️ Add Products to the Database
+
+Make sure your database (`db.sqlite3`) exists.  
+If not, run:
+
+```
+python manage.py migrate
+```
+
+To add example products, open the Django shell:
+
+```
+python manage.py shell
+```
+
+Then paste:
+
+```python
+from Products.models import Product
+
+products = [
+    {"name": "Chicken Minion", "description": "Chicken-shaped Minion toy.", "price": 19.99, "stock": 10, "image": "products/chicken_minion.png"},
+    {"name": "Classic Minion", "description": "Classic Minion, ready for adventure.", "price": 17.99, "stock": 15, "image": "products/classic_minion.png"},
+    {"name": "Purple Minion", "description": "Wild Purple Minion, full of mischief.", "price": 21.99, "stock": 8, "image": "products/purple_minion.png"},
+]
+
+for p in products:
+    Product.objects.create(**p)
+```
+
+Make sure the images are in `media/products/`.
