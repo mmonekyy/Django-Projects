@@ -1,7 +1,9 @@
 # 🛍️ Minion Shop
 📦 To install project dependencies, run:
 
-```pip install -r requirements.txt```
+```
+pip install -r requirements.txt
+```
 
 ➡️ To add example products to your database, see the [Add Products to the Database](#️-add-products-to-the-database) section below.
 
