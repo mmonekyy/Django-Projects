@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
+  <body>
+    <nav>
+      <section class="TopNav"><a href="/Blog/Recipes">Recipies</a></section>
+      <section class="TopNav"><a href="/Blog/AboutMe">AboutMe</a></section>
+    </nav>
+    <section id="Main">
+      <section id="recipe">
+        <h1>{{ recipe.title }}</h1>
+        <div class="recipe-image">
+          <img src="{{ recipe.img.url }}" alt="{{ recipe.title }}" />
+        </div>
+        <div class="recipe-content">{{ recipe.text|linebreaksbr|safe }}</div>
+      </section>
+    </section>
+    <footer>&copy; 2025 All rights reserved</footer>
+  </body>
+</html>

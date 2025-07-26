@@ -1,0 +1,276 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+nav {
+  text-align: center;
+  background-color: rgba(255, 82, 163, 0.85);
+  min-height: 5em;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+a {
+  text-decoration: none;
+}
+
+nav a {
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: rgb(250, 148, 53);
+  text-shadow: 0 0 8px rgba(250, 148, 53, 0.5);
+}
+
+nav a:active {
+  color: rgb(255, 200, 100);
+}
+
+.TopNav {
+  display: inline-block;
+  width: 25%;
+  font-size: 2.5em;
+  padding: 0.2em;
+}
+#Main {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.7),
+    rgba(50, 20, 80, 0.6)
+  );
+  margin-left: 15%;
+  margin-right: 15%;
+  height: 51.7em;
+  overflow-y: auto;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer {
+  height: 1.9em;
+  font-size: 1.5em;
+  text-align: center;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 82, 163, 0.9),
+    rgba(250, 148, 53, 0.9)
+  );
+  color: white;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+#search {
+  position: sticky;
+  top: 0;
+  width: 50%;
+  margin: 0 auto 20px auto;
+  z-index: 100;
+}
+
+#search form {
+  display: flex;
+  gap: 0;
+  align-items: stretch;
+  width: 100%;
+}
+
+#search input[type="text"] {
+  flex: 1;
+  font-size: 1.2em;
+  padding: 0.8em 1.2em;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(250, 148, 53, 0.6);
+  border-radius: 25px 0 0 25px;
+  color: white;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#search input[type="text"]:focus {
+  border-color: rgb(250, 148, 53);
+  box-shadow: 0 0 15px rgba(250, 148, 53, 0.4);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+#search input[type="text"]::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#search input[type="submit"] {
+  font-size: 1.2em;
+  padding: 0.8em 1.5em;
+  background: linear-gradient(135deg, rgb(255, 82, 163), rgb(250, 148, 53));
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0 25px 25px 0;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#search input[type="submit"]:hover {
+  background: linear-gradient(135deg, rgb(255, 102, 183), rgb(250, 168, 73));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(250, 148, 53, 0.4);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+#search input[type="submit"]:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(250, 148, 53, 0.6);
+}
+.recipe {
+  display: block;
+  text-align: center;
+  margin-bottom: 3em;
+  padding: 1.5em;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(250, 148, 53, 0.2);
+}
+
+.recipe h2 {
+  color: rgb(250, 148, 53);
+  margin-bottom: 1em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.recipe img {
+  width: 50%;
+  display: block;
+  margin: 0 auto 1em auto;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.recipe img:hover {
+  transform: scale(1.05);
+}
+#recipe {
+  display: block;
+  text-align: center;
+  margin-bottom: 3em;
+  padding: 2em;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.06)
+  );
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+#recipe h2 {
+  color: rgb(250, 148, 53);
+  font-size: 2.5em;
+  margin-bottom: 1em;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+#recipe img {
+  width: 60%;
+  display: block;
+  margin: 0 auto 2em auto;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+.recipe-content {
+  line-height: 1.6;
+  margin-top: 1em;
+}
+.recipe-content p {
+  margin-bottom: 1em;
+}
+
+/* SPÓJNY SCHEMAT KOLORÓW - GŁÓWNE KOLORY: */
+/* Różowy: #ff52a3 (rgb(255, 82, 163)) */
+/* Pomarańczowy: #fa9435 (rgb(250, 148, 53)) */
+/* Biały: #ffffff */
+/* Ciemny gradient: rgba(0,0,0,0.7) do rgba(50,20,80,0.6) */
+
+.short_link {
+  display: block;
+  margin: 1em auto;
+  width: 60%;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 82, 163, 0.6),
+    rgba(250, 148, 53, 0.6)
+  );
+  padding: 1em 1.5em;
+  border-radius: 25px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  font-weight: 500;
+  font-size: 1.1em;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.short_link:visited {
+  color: rgba(255, 255, 255, 0.8);
+  background: linear-gradient(
+    135deg,
+    rgba(190, 190, 190, 0.4),
+    rgba(150, 150, 150, 0.4)
+  );
+  border-color: rgba(190, 190, 190, 0.5);
+}
+
+.short_link:hover {
+  color: white;
+  background: linear-gradient(135deg, rgb(255, 82, 163), rgb(250, 148, 53));
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(250, 148, 53, 0.4);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.short_link:active {
+  color: white;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 82, 163, 0.9),
+    rgba(250, 148, 53, 0.9)
+  );
+  transform: translateY(-1px) scale(1.01);
+  box-shadow: 0 4px 15px rgba(250, 148, 53, 0.6);
+}
