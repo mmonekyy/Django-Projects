@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
+  <body>
+    <nav>
+      <section class="TopNav"><a href="Recipes">Recipies</a></section>
+      <section class="TopNav"><a href="AboutMe">AboutMe</a></section>
+    </nav>
+    <section id="Main">
+      <h1>Welcome to my kitchen!</h1>
+      <p>
+        Here you'll find recipes for delicious homemade dishes that you can
+        easily prepare yourself. From classic soups to modern desserts – there's
+        something for everyone.
+      </p>
+      <img src="{% static 'cooking.jpg' %}" alt="Gotowanie w kuchni" />
+    </section>
+    <footer>&copy; 2025 All rights reserved</footer>
+  </body>
+</html>
