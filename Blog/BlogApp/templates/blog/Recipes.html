@@ -15,7 +15,7 @@
     <section id="Main">
       <div id="search">
   <form method="GET" action="{% url 'Recipes' %}">
-    <input type="text" name="search" placeholder="Szukaj przepisów..."
+    <input type="text" name="search" placeholder="Look for Recipes.."
            value="{{ request.GET.search }}" />
     <input type="submit" value="search" />
   </form>
